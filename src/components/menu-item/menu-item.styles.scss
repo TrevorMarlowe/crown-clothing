@@ -43,6 +43,7 @@
   }
 
   .content {
+    transition: opacity 0.2s;
     height: 90px;
     padding: 0 25px;
     display: flex;
