@@ -8,25 +8,46 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+
   &:hover {
     .image {
       opacity: 0.8;
     }
+
     button {
-      visibility: visible;
       opacity: 0.85;
-      -webkit-transition: opacity 150ms, visibility 150ms;
-      transition: opacity 150ms, visibility 150ms;
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+      }
     }
   }
 `;
 
 export const AddButton = styled(CustomButton)`
   width: 80%;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 0.7;
   position: absolute;
   top: 255px;
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
+  }
 `;
 
 export const BackgroundImage = styled.div`
